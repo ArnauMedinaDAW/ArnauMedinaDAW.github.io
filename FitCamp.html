@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitCamp</title>
+    <link rel="stylesheet" href="FitCamp.css">
+    <link rel="icon" type="image/png" href="minLOGO.PNG">
+</head>
+<body>
+
+    
+    <!-- Banner -->
+    <header id="banner">    
+        <img src="Logo.PNG">
+        <button>LOGIN</button>
+        <button onclick="redirectToPagePlanes()">PLANES</button>
+        <button onclick="redirectToPageBlog()">BLOG</button>
+        <button onclick="redirectToPageEntrenadores()">ENTRENADORES</button>
+        <button onclick="redirectToPageINFO()">INFORMACION</button>
+    
+    </header>
+    <!-- LOGIN -->
+    <div id="loginForm" style="display: none;">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+            
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" placeholder="Ingrese su usuario">
+    
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" placeholder="Ingrese su contraseña">
+    
+            <button type="submit">Iniciar Sesión</button>
+            <!-- Registro -->
+           
+        
+        </form>
+        <button id="registerBtn" style="display: none;">REGISTRARSE</button>
+    </div>
+    
+    <center><img src="PLAN NUTRICIÓN.png" class="imagen">  
+    <p class="paragraf">En nuestra página web, ofrecemos a nuestros usuarios la 
+        opción de crear un plan de nutrición completamente personalizado, 
+        diseñado específicamente para satisfacer sus necesidades individuales. 
+        Nuestro equipo de expertos en nutrición ha desarrollado un sistema avanzado 
+        que utiliza los datos proporcionados por nuestros usuarios para crear planes 
+        alimenticios que promuevan la salud y el bienestar.
+    </p>
+    </center>
+    <center><img src="PLAN ENTRENAR.png" class="imagen">
+    <p class="paragraf">En nuestra página web, ofrecemos a nuestros clientes nuestro plan de entrenamiento diseñado
+        para ayudar a nuestros miembros a alcanzar sus objetivos de condición física de manera efectiva y segura.
+        Incluye una variedad de programas de ejercicio que se adaptan a diferentes niveles de habilidad y metas, 
+        como entrenamiento de fuerza, cardio, flexibilidad y equilibrio. Además, ofrecemos sesiones de entrenamiento 
+        personalizado con nuestros instructores certificados, que brindan asesoramiento individualizado y motivación 
+        para maximizar los resultados.
+    </p>
+    </center>   
+
+    <script src="FitCamp.js"></script>
+      
+    <center><button>CREAR</button></center>
+ 
+
+
+    <!-- Foooter -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 Fit Camp. Todos los derechos reservados.</p>
+            <ul>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Términos de servicio</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+    <script src="FitCamp.js"></script>
+</body>
+</html>
