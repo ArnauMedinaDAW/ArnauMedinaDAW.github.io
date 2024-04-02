@@ -38,8 +38,6 @@ body {
     
 }
 
-
-
 #loginForm {
     margin: 20px auto;
     width: 300;
@@ -87,9 +85,9 @@ body {
     height: 200px;
     width: 350px;
     margin-left: 5%;
-    
-    
+  
 }
+
 .paragraf{
    
     font-family: Arial, sans-serif; /* Tipo de fuente */
