@@ -1,5 +1,4 @@
 
-// FitCamp.js
 
 // Obtener referencia al botón de login y al formulario de inicio de sesión
 const loginBtn1= document.querySelector("#banner button");

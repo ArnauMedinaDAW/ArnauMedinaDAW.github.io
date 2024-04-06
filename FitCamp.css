@@ -84,8 +84,10 @@ body {
     
     height: 200px;
     width: 350px;
-    margin-left: 5%;
-  
+    transition: transform 0.3s;
+}
+.imagen:hover {
+    transform: scale(1.1);
 }
 
 
@@ -155,3 +157,5 @@ footer {
 .footer-content ul li a:hover {
     text-decoration: underline;
 }
+
+/* PRODUCTOS SUBLISTA*/
