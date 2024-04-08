@@ -66,7 +66,7 @@ function redirectToPagePlanes() {
 }
 
 function redirectToPageEntrenadores() {
-    window.location.href = "entrenadores.html"; 
+    window.location.href = "nosotros.html"; 
 }
 function redirectToPagePlanNutricion() {
     window.location.href = "PlanNutricion.html"; 
