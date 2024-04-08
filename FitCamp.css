@@ -1,7 +1,14 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(255, 255, 255);
+}
+.logo-container {
+    margin-right: 20px; /* Espacio entre el logo y la lista */
+}
+
+.logo-container img {
+    max-width: 150px; /* Ajusta el tamaño máximo del logo según tus necesidades */
 }
 nav{
 	max-width: 900px;
@@ -9,6 +16,8 @@ nav{
 	background-color: #333;
 	font-size: 20px;
 	margin-top: 50px;
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
 }
 .menu-horizontal{
 	list-style: none;
@@ -45,34 +54,25 @@ nav{
 	padding: 15px 15px 15px 20px;
 }
 
-#banner {
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
 #prodVendidos{
     margin-top: 50px;
     margin-left: 120px;
     font-size: 18px;
+    font-family: Arial, Sans-serif;
+    color: #333;
 }
 /* Estilos para las fotos */
 .image-container {
     padding-top: 30px;
     padding-left: 8px;
-    padding-right: 8px;
+    padding-right   : 8px;
     position: relative; /* Para permitir que el texto descriptivo se posicione correctamente */
     display: inline-block; /* Para que el contenedor se ajuste al tamaño de la imagen */
 }
 
 .image-container img {
     width: 250px;
-    height: auto;
+    height: 250px;
     transition: transform 0.3s, box-shadow 0.3s; /* Transición suave de transformación y sombra */
     border-radius: 10px; /* Bordes curvos */
 }

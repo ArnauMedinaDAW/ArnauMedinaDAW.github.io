@@ -53,25 +53,24 @@ loginForm.addEventListener("submit", function(event) {
 
 
 //Cambiar de html
-function redirectToPageINFO() {
-    window.location.href = "info.html"; 
-}
-
-function redirectToPageBlog() {
-    window.location.href = "blog.html"; 
-}
-
-function redirectToPagePlanes() {
-    window.location.href = "planes.html"; 
-}
-
-function redirectToPageEntrenadores() {
-    window.location.href = "nosotros.html"; 
-}
 function redirectToPagePlanNutricion() {
     window.location.href = "PlanNutricion.html"; 
 }
 function redirectToPagePlanEntrenamiento() {
     window.location.href = "PlanEntrenamiento.html"; 
 }
+function redirectToPageProductos() {
+    window.location.href = "productos.html"; 
+}
+function redirectToPageBlog() {
+    window.location.href = "blog.html"; 
+}
+function redirectToPageNosotros() {
+    window.location.href = "nosotros.html"; 
+}
+
+function redirectToPageINFO() {
+    window.location.href = "info.html"; 
+}
+
 
