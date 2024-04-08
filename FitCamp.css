@@ -3,6 +3,47 @@ body {
     font-family: Arial, sans-serif;
     background-color: rgb(230, 230, 230);
 }
+nav{
+	max-width: 900px;
+	margin: auto;
+	background-color: #333;
+	font-size: 20px;
+	margin-top: 50px;
+}
+.menu-horizontal{
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+}
+.menu-horizontal > li > a{
+	display: block;
+	padding: 15px 20px;
+	color: white;
+	text-decoration: none;
+}
+.menu-horizontal > li:hover{
+	background-color: red;
+}
+.menu-vertical{
+	position: absolute;
+	display: none;
+	list-style: none;
+	width: 675px;
+	background-color: rgba(0, 0, 0, .5);
+}
+.menu-horizontal li:hover .menu-vertical{
+	display: block;
+}
+.menu-vertical li:hover{
+	background-color: black;
+}
+
+.menu-vertical li a{
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: 15px 15px 15px 20px;
+}
 
 #banner {
     background-color: black;
@@ -15,28 +56,49 @@ body {
     margin-bottom: 20px;
 }
 
-#banner > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#prodVendidos{
+    margin-top: 50px;
+    margin-left: 120px;
+    font-size: 18px;
+}
+/* Estilos para las fotos */
+.image-container {
+    padding-top: 30px;
+    padding-left: 8px;
+    padding-right: 8px;
+    position: relative; /* Para permitir que el texto descriptivo se posicione correctamente */
+    display: inline-block; /* Para que el contenedor se ajuste al tamaño de la imagen */
 }
 
-#banner img {
-    max-height: 100px;
-    margin-right: 10px;
+.image-container img {
+    width: 250px;
+    height: auto;
+    transition: transform 0.3s, box-shadow 0.3s; /* Transición suave de transformación y sombra */
+    border-radius: 10px; /* Bordes curvos */
 }
 
-#banner button {
-    background-color: black;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-left: 10px;
-    
+
+.image-description {
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Centra horizontalmente el texto descriptivo */
+    transform: translateX(-50%); /* Centra horizontalmente el texto descriptivo */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: white; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    transition: opacity 0.3s; /* Transición suave de opacidad */
+    opacity: 0; /* El texto descriptivo está oculto inicialmente */
 }
+
+.image-container:hover img {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Añade una sombra alrededor de la imagen */
+}
+
+.image-container:hover .image-description {
+    opacity: 1; /* Muestra el texto descriptivo */
+}
+
 
 #loginForm {
     margin: 20px auto;
@@ -80,15 +142,6 @@ body {
     background-color: #333;
 }
 
-.imagen {
-    
-    height: 200px;
-    width: 350px;
-    transition: transform 0.3s;
-}
-.imagen:hover {
-    transform: scale(1.1);
-}
 
 
 .buttonPLANES {
@@ -110,19 +163,10 @@ body {
 }
 
 
-.paragraf{
-   
-    font-family: Arial, sans-serif; /* Tipo de fuente */
-    font-size: 16px; /* Tamaño del texto */
-    line-height: 1.5; /* Espacio entre líneas */
-    color: #333; /* Color del texto */
-    margin-bottom: 20px; /* Margen inferior */
-    margin-left: 50px;
-    margin-right: 50px;
-    
-    
-}
 footer {
+  
+    bottom: 0;
+    width: 100%;
     background-color: #333;
     color: #fff;
     padding: 20px 0;
@@ -148,7 +192,6 @@ footer {
     margin-right: 10px;
 }
 
-
 .footer-content ul li a {
     color: #fff;
     text-decoration: none;
@@ -158,4 +201,3 @@ footer {
     text-decoration: underline;
 }
 
-/* PRODUCTOS SUBLISTA*/

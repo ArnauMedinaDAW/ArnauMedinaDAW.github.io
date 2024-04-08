@@ -1,20 +1,18 @@
+// Obtener referencia al enlace de login
+const loginLink = document.querySelector("nav ul.menu-horizontal li:first-child a");
 
-
-// Obtener referencia al botón de login y al formulario de inicio de sesión
-const loginBtn1= document.querySelector("#banner button");
-const loginForm1 = document.getElementById("loginForm");
-
-// Agregar un evento de clic al botón de login
-loginBtn1.addEventListener("click", function() {
-    // Si el formulario está oculto, mostrarlo; de lo contrario, ocultarlo
-    if (loginForm1.style.display === "none") {
-        loginForm1.style.display = "block";
+// Agregar un evento de clic al enlace de login
+loginLink.addEventListener("click", function(event) {
+    // Evitar el comportamiento predeterminado del enlace
+    event.preventDefault();
+    // Mostrar u ocultar el formulario de inicio de sesión
+    const loginForm = document.getElementById("loginForm");
+    if (loginForm.style.display === "none") {
+        loginForm.style.display = "block";
     } else {
-        loginForm1.style.display = "none";
+        loginForm.style.display = "none";
     }
 });
-
-
 
 // Obtener referencia a los elementos del formulario y al botón de registro
 const usernameInput = document.getElementById("username");
@@ -70,3 +68,10 @@ function redirectToPagePlanes() {
 function redirectToPageEntrenadores() {
     window.location.href = "entrenadores.html"; 
 }
+function redirectToPagePlanNutricion() {
+    window.location.href = "PlanNutricion.html"; 
+}
+function redirectToPagePlanEntrenamiento() {
+    window.location.href = "PlanEntrenamiento.html"; 
+}
+
