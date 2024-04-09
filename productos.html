@@ -8,6 +8,26 @@
 </head>
 <body>
     <script src="productos.js"></script>
+    <nav>
+        <link rel="stylesheet" href="index.css">
+        <div class="logo-container">
+            <button  onclick="redirectToPageIndex()"><img id="logo" src="Logo.PNG"></button>
+        </div>
+		<ul class="menu-horizontal">
+			<li><a href="#">Login</a></li>
+			<li>
+				<a href="#">Planes</a>
+				<ul class="menu-vertical">
+					<li><a onclick="redirectToPagePlanNutricion()"href="#">Plan nutrición</a></li>
+					<li><a onclick="redirectToPagePlanEntrenamiento() "href="#">Plan entrenamiento</a></li>
+				</ul>
+			</li>
+            <li><a  onclick="redirectToPageProductos()" href="#">Productos</a></li>
+			<li><a  onclick="redirectToPageBlog()" href="#">Blog</a></li>
+			<li><a onclick="redirectToPageNosotros()" href="#">Nosotros</a></li>
+            <li><a  onclick="redirectToPageINFO()" href="#">Información</a></li>
+		</ul>
+	</nav>
 
     <header>
 		<ul class="menu-horizontal">
@@ -18,6 +38,7 @@
             <li><button class="filter-button" data-filter="Equipo">Equipo</button></li>
 		</ul>
     </header>
+
 
     <div class="gallery">
         
