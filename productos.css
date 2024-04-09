@@ -3,46 +3,17 @@ body {
     font-family: Arial, sans-serif;
     background-color: rgb(255, 255, 255);
 }
-header {
-    max-width: 900px;
-    margin: auto;
-    background-color: #333;
-    font-size: 20px;
-    margin-top: 50px;
-    display: flex;
-    align-items: center; /* Centra verticalmente los elementos */
+#datafilter{
+
+padding: 20px;
 }
-
-
-header .menu-horizontal {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
+label {
+    color: black; /* Cambia el color del texto a rojo */
 }
-
-header .menu-horizontal > li > button {
-    display: block;
-    padding: 15px 20px;
-    color: white;
-    background-color: transparent; /* Fondo transparente por defecto */
-    border: none;
-    cursor: pointer;
-}
-
-header .menu-horizontal > li > button:hover {
-    background-color: red; /* Cambia el color de fondo al pasar el ratón */
-}
-
-
 .gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-}
-
-.gallery img {
-    width: 200px; /* Ajusta el tamaño de las imágenes según tus necesidades */
-    margin-bottom: 20px; /* Espacio entre las imágenes */
 }
 
 
@@ -56,8 +27,8 @@ header .menu-horizontal > li > button:hover {
 }
 
 .image-container img {
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: auto;
     transition: transform 0.3s, box-shadow 0.3s; /* Transición suave de transformación y sombra */
     border-radius: 10px; /* Bordes curvos */
 }

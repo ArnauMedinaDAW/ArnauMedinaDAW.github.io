@@ -1,0 +1,58 @@
+.logo-container {
+    margin-left: 20px; /* Espacio entre el logo y la lista */
+}
+
+.logo-container img {
+    max-width: 150px; /* Ajusta el tamaño máximo del logo según tus necesidades */
+
+}
+#logobuton{
+    padding: 0;
+    border: none;
+    margin: none;
+    background: none;
+}
+nav{
+	max-width: 900px;
+	margin: auto;
+	background-color: #333;
+	font: 20px "Times New Roman";
+	margin-top: 50px;
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+	
+}
+.menu-horizontal{
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+}
+.menu-horizontal > li > a{
+	display: block;
+	padding: 15px 20px;
+	color: white;
+	text-decoration: none;
+}
+.menu-horizontal > li:hover{
+	background-color: red;
+}
+.menu-vertical{
+	position: absolute;
+	display: none;
+	list-style: none;
+	width: 300px;
+	background-color: #333;
+}
+.menu-horizontal li:hover .menu-vertical{
+	display: block;
+}
+.menu-vertical li:hover{
+	background-color: black;
+}
+
+.menu-vertical li a{
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: 15px 15px 15px 20px;
+}

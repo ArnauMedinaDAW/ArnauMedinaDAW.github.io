@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FitCamp</title>
-    <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/png" href="minLOGO.PNG">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="NAV.css">
+    <script src="NAV.js"></script>
+
 </head>
 <body>
-    <script src="index.js"></script>
     
     <nav>
         <div class="logo-container">
-            <button  onclick="redirectToPageIndex()"><img id="logo" src="Logo.PNG"></button>
+            <button id="logobuton" onclick="redirectToPageIndex()"><img id="logo" src="Logo.PNG"></button>
         </div>
 		<ul class="menu-horizontal">
 			<li><a href="#">Login</a></li>
@@ -24,10 +26,6 @@
 				</ul>
 			</li>
             <li><a  onclick="redirectToPageProductos()" href="#">Productos</a>
-                <ul class="menu-vertical">
-					<li><a onclick="redirectToPagePlanNutricion()"href="#">Plan nutrición</a></li>
-					<li><a onclick="redirectToPagePlanEntrenamiento() "href="#">Plan entrenamiento</a></li>
-				</ul>
             </li>
 			<li><a  onclick="redirectToPageBlog()" href="#">Blog</a></li>
 			<li><a onclick="redirectToPageNosotros()" href="#">Nosotros</a></li>
@@ -35,6 +33,7 @@
 
 		</ul>
 	</nav>
+    
     <!-- LOGIN -->
     <div id="loginForm" style="display: none;">
         <h2>Iniciar Sesión</h2>

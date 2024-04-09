@@ -4,25 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plan Nutrición</title>
-    <link rel="stylesheet" href="blog.css">
     <link rel="icon" type="image/png" href="minLOGO.PNG">
+    <link rel="stylesheet" href="NAV.css">
+    <script src="NAV.js"></script>
+    <script src="PlanNutricion.js"></script>
+  
 </head>
 <body>
 
-    <form action="#" name="bd_practica" method="post">
+    <nav>
+
+
+        <div class="logo-container">
+            <button id="logobuton" onclick="redirectToPageIndex()"><img id="logo" src="Logo.PNG"></button>
+        </div>
+		<ul class="menu-horizontal">
+			<li><a href="#">Login</a></li>
+			<li>
+				<a href="#">Planes</a>
+				<ul class="menu-vertical">
+					<li><a onclick="redirectToPagePlanNutricion()"href="#">Plan nutrición</a></li>
+					<li><a onclick="redirectToPagePlanEntrenamiento() "href="#">Plan entrenamiento</a></li>
+				</ul>
+			</li>
+            <li><a  onclick="redirectToPageProductos()" href="#">Productos</a>
+            </li>
+			<li><a  onclick="redirectToPageBlog()" href="#">Blog</a></li>
+			<li><a onclick="redirectToPageNosotros()" href="#">Nosotros</a></li>
+            <li><a  onclick="redirectToPageINFO()" href="#">Información</a></li>
+
+		</ul>
+	</nav>
+
+    <form action="" name="bd_practica" method="post">
         <input type="text" name="edat" placeholder="edat">
         <input type="text" name="sexo" placeholder="sexo">
         <input type="text" name="peso" placeholder="peso">
         <input type="text" name="altura" placeholder="altura">
         <input type="text" name="actividad fisica" placeholder="actividad fisica">
-
-        <input type="submit" name="registro">
-        <input type="reset">
-
+    
+        <input type="submit" name="registro" value="Enviar">
+        <input type="reset" value="Restablecer">
     </form>
 
-<button onclick="redirectToPageMAIN()"> ↲ Volver </button>
-<script src="PlanNutricion.js"></script>
+
+
 </body>
 </html>
 

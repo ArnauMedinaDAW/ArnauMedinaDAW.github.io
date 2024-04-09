@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
+    <script src="productos.js"></script>
+    <link rel="stylesheet" href="NAV.css">
+    <script src="NAV.js"></script>
     <link rel="stylesheet" href="productos.css">
+
 </head>
 <body>
-    <script src="productos.js"></script>
+
+
+
     <nav>
-        <link rel="stylesheet" href="index.css">
+
+
         <div class="logo-container">
-            <button  onclick="redirectToPageIndex()"><img id="logo" src="Logo.PNG"></button>
+            <button id="logobuton" onclick="redirectToPageIndex()"><img id="logo" src="Logo.PNG"></button>
         </div>
 		<ul class="menu-horizontal">
 			<li><a href="#">Login</a></li>
@@ -29,15 +36,16 @@
 		</ul>
 	</nav>
 
-    <header>
-		<ul class="menu-horizontal">
-			<li><button class="filter-button" data-filter="all">Todos</button></li>
-            <li><button class="filter-button" data-filter="Proteina">Proteina</button></li>
-            <li><button class="filter-button" data-filter="Creatina">Cretina</button></li>
-            <li><button class="filter-button" data-filter="Cafeina">Cafeina</button></li>
-            <li><button class="filter-button" data-filter="Equipo">Equipo</button></li>
-		</ul>
-    </header>
+
+<center>
+<div id="datafilter">
+    <label><input type="checkbox" class="filter-checkbox" data-filter="all">Todos</label>
+    <label><input type="checkbox" class="filter-checkbox" data-filter="Proteina">Proteina</label>
+    <label><input type="checkbox" class="filter-checkbox" data-filter="Creatina">Creatina</label>
+    <label><input type="checkbox" class="filter-checkbox" data-filter="Cafeina">Cafeina</label>
+    <label><input type="checkbox" class="filter-checkbox" data-filter="Equipo">Equipo</label>
+</div>
+</center>
 
 
     <div class="gallery">
