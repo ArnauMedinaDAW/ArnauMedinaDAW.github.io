@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitCamp</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="minLOGO.PNG">
+</head>
+<body>
+    <script src="index.js"></script>
+    <nav>
+        <div class="logo-container">
+            <img id="logo" src="Logo.PNG">
+        </div>
+		<ul class="menu-horizontal">
+			<li><a href="#">Login</a></li>
+			<li>
+				<a href="#">Planes</a>
+				<ul class="menu-vertical">
+					<li><a onclick="redirectToPagePlanNutricion()"href="#">Plan nutrición</a></li>
+					<li><a onclick="redirectToPagePlanEntrenamiento() "href="#">Plan entrenamiento</a></li>
+				</ul>
+			</li>
+            <li><a  onclick="redirectToPageProductos()" href="#">Productos</a></li>
+			<li><a  onclick="redirectToPageBlog()" href="#">Blog</a></li>
+			<li><a onclick="redirectToPageNosotros()" href="#">Nosotros</a></li>
+            <li><a  onclick="redirectToPageINFO()" href="#">Información</a></li>
+
+		</ul>
+	</nav>
+    <!-- LOGIN -->
+    <div id="loginForm" style="display: none;">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+            
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" placeholder="Ingrese su usuario">
+    
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" placeholder="Ingrese su contraseña">
+    
+            <button type="submit">Iniciar Sesión</button>
+            <!-- Registro -->
+           
+        
+        </form>
+        <button id="registerBtn" style="display: none;">REGISTRARSE</button>
+    </div>
+    
+
+    <h1 id="prodVendidos" >PRODUCTOS MAS VENDIDOS</h1>
+    <center>
+    <div class="image-container">
+        <img src="1.webp" alt="Descripción de la imagen">
+        <div class="image-description">
+            100% Whey Hydroisolate Zero
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="2.webp" alt="Descripción de la imagen">
+        <div class="image-description">
+            100% Real Whey Protein 1000g
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="3.webp" alt="Descripción de la imagen">
+        <div class="image-description">
+            Proteina Whey Zero Diet 
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="4.webp" alt="Descripción de la imagen">
+        <div class="image-description">
+            Capsulas Cafeina 200mg
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="5.webp" alt="Descripción de la imagen">
+        <div class="image-description">
+             Creatina Monohydrate 300g
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="6.webp" alt="Descripción de la imagen">
+        <div class="image-description">
+            Zero Protein Snack 35g
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="7.webp" alt="Descripción de la imagen">
+        <div class="image-description">
+            Proteina Whey isolate 1000g
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="8.webp" alt="Descripción de la imagen">
+        <div class="image-description">
+            Proteina bar High Protein 1000g
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="9.webp" alt="Descripción de la imagen">
+        <div class="image-description">
+            Proteina Isolate Prime 
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="10.webp" alt="Descripción de la imagen">
+        <div class="image-description">
+            4 x Pancake 500 g
+        </div>
+    </div>
+    </center>
+    
+    
+ 
+
+    <!-- Foooter -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 Fit Camp. Todos los derechos reservados.</p>
+            <ul>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Términos de servicio</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+    <script src="FitCamp.js"></script>
+</body>
+</html>

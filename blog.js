@@ -1,4 +1,4 @@
 function redirectToPageMAIN() {
-    window.location.href = "FitCamp.html"; 
+    window.location.href = "index.html"; 
 }
 aaa 
