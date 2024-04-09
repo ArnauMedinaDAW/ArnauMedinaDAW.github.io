@@ -79,4 +79,9 @@ function redirectToPageINFO() {
     window.location.href = "info.html"; 
 }
 
+function redirectToPageIndex() {
+    window.location.href = "index.html"; 
+}
+
+
 

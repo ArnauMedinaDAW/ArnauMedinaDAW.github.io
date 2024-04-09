@@ -9,6 +9,13 @@ body {
 
 .logo-container img {
     max-width: 150px; /* Ajusta el tamaño máximo del logo según tus necesidades */
+
+}
+button{
+    padding: 0;
+    border: none;
+    margin: none;
+    background: none;
 }
 nav{
 	max-width: 900px;
