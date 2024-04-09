@@ -1,18 +1,24 @@
-// Obtener referencia al enlace de login
-const loginLink = document.querySelector("nav ul.menu-horizontal li:first-child a");
+document.addEventListener("DOMContentLoaded", function() {
+    // Obtener referencia al contenedor de navegación
+    const navContainer = document.querySelector("nav ul.menu-horizontal");
 
-// Agregar un evento de clic al enlace de login
-loginLink.addEventListener("click", function(event) {
-    // Evitar el comportamiento predeterminado del enlace
-    event.preventDefault();
-    // Mostrar u ocultar el formulario de inicio de sesión
-    const loginForm = document.getElementById("loginForm");
-    if (loginForm.style.display === "none") {
-        loginForm.style.display = "block";
-    } else {
-        loginForm.style.display = "none";
-    }
+    // Agregar un evento de clic al contenedor de navegación
+    navContainer.addEventListener("click", function(event) {
+        // Verificar si el elemento clickeado es el enlace de login
+        if (event.target.tagName === "A" && event.target.textContent.trim() === "Login") {
+            // Evitar el comportamiento predeterminado del enlace
+            event.preventDefault();
+            // Mostrar u ocultar el formulario de inicio de sesión
+            const loginForm = document.getElementById("loginForm");
+            if (loginForm.style.display === "none") {
+                loginForm.style.display = "block";
+            } else {
+                loginForm.style.display = "none";
+            }
+        }
+    });
 });
+
 
 // Obtener referencia a los elementos del formulario y al botón de registro
 const usernameInput = document.getElementById("username");
