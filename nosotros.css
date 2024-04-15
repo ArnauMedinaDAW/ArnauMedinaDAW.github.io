@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+h1{
+
+    color: #5B627D;
+    font: 14px "Roboto ", sans-serif;
+    margin:none
+
+}
+h1{
+
+    color: #232938;
+    font: 48px "Roboto ", sans-serif;
+    margin:none
+
+}
+p{
+
+    color: #5B627D;
+    font: 16px "Roboto ", sans-serif;
+    margin:none
+
+}
+#id1{
+
+max-width: 410px;
+
+
+}
+#id1 p {
+    max-width: none; /* Anula el ancho máximo para el párrafo */
+}
