@@ -1,56 +1,70 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
 
-}
-#datafilter{
+    }
+    #datafilter{
 
-padding: 20px;
-}
-label {
-    color: black; /* Cambia el color del texto a rojo */
-}
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
+    padding: 20px;
+    }
+    label {
+        color: black; /* Cambia el color del texto a rojo */
+    }
+    .gallery {
 
-
-/* Estilos para las fotos */
-.image-container {
-    padding-top: 30px;
-    padding-left: 8px;
-    padding-right   : 8px;
-    position: relative; /* Para permitir que el texto descriptivo se posicione correctamente */
-    display: inline-block; /* Para que el contenedor se ajuste al tamaño de la imagen */
-}
-
-.image-container img {
-    width: 150px;
-    height: auto;
-    transition: transform 0.3s, box-shadow 0.3s; /* Transición suave de transformación y sombra */
-    border-radius: 10px; /* Bordes curvos */
-}
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
 
 
-.image-description {
-    position: absolute;
-    bottom: 0;
-    left: 50%; /* Centra horizontalmente el texto descriptivo */
-    transform: translateX(-50%); /* Centra horizontalmente el texto descriptivo */
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-    color: white; /* Color del texto */
-    padding: 10px; /* Espaciado interno */
-    transition: opacity 0.3s; /* Transición suave de opacidad */
-    opacity: 0; /* El texto descriptivo está oculto inicialmente */
-}
+    }
 
-.image-container:hover img {
-    transform: scale(1.1); /* Aumenta el tamaño de la imagen */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Añade una sombra alrededor de la imagen */
-}
 
-.image-container:hover .image-description {
-    opacity: 1; /* Muestra el texto descriptivo */
-}
+    /* Estilos para las fotos */
+    .image-container {
+        padding-top: 30px;
+        padding-left: 8px;
+        padding-right  : 8px;
+        position: relative; /* Para permitir que el texto descriptivo se posicione correctamente */
+        display: inline-block; /* Para que el contenedor se ajuste al tamaño de la imagen */
+        border: none;
+        background-color: rgb(224, 224, 224);
+    
+    }
+
+    .image-container img {
+        width: 135px;
+        height: 135px;
+        object-fit: cover;
+        transition: transform 0.3s, box-shadow 0.3s; /* Transición suave de transformación y sombra */
+        border-radius: 10px; /* Bordes curvos */
+    }
+
+
+    .image-description {
+        position: absolute;
+        bottom: 0;
+        left: 50%; /* Centra horizontalmente el texto descriptivo */
+        transform: translateX(-50%); /* Centra horizontalmente el texto descriptivo */
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+        color: white; /* Color del texto */
+        padding: 10px; /* Espaciado interno */
+        transition: opacity 0.3s; /* Transición suave de opacidad */
+        opacity: 0; /* El texto descriptivo está oculto inicialmente */
+    }
+
+    .image-container:hover img {
+        transform: scale(1.1); /* Aumenta el tamaño de la imagen */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Añade una sombra alrededor de la imagen */
+
+    }
+
+    .image-container:hover .image-description {
+        opacity: 1; /* Muestra el texto descriptivo */
+    }
+    .hidden {
+        display: none;
+    }

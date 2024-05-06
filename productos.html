@@ -12,10 +12,7 @@
 </head>
 <body>
 
-
-
     <nav>
-
 
         <div class="logo-container">
             <button id="logobuton" onclick="redirectToPageIndex()"><img id="logo" src="Logo.PNG"></button>
@@ -39,11 +36,13 @@
 
 <center>
 <div id="datafilter">
-    <label><input type="checkbox" class="filter-checkbox" data-filter="all">Todos</label>
+    <label><input type="checkbox" class="filter-checkbox" data-filter="all" checked>Todos</label>
     <label><input type="checkbox" class="filter-checkbox" data-filter="Proteina">Proteina</label>
     <label><input type="checkbox" class="filter-checkbox" data-filter="Creatina">Creatina</label>
     <label><input type="checkbox" class="filter-checkbox" data-filter="Cafeina">Cafeina</label>
+    <label><input type="checkbox" class="filter-checkbox" data-filter="Pre">Preentreno</label>
     <label><input type="checkbox" class="filter-checkbox" data-filter="Equipo">Equipo</label>
+    <label><input type="checkbox" class="filter-checkbox" data-filter="Snacks">Snacks</label>
 </div>
 </center>
 
@@ -51,66 +50,302 @@
     <div class="gallery">
         
         <center>
-            <div class="image-container">
-                <img src="1.webp" class="Proteina">
+            <button class="image-container">
+                <img src="prote1.webp" class="Proteina">
                 <div class="image-description">
                     100% Whey Hydroisolate Zero
                 </div>
-            </div>
-            <div class="image-container">
-                <img src="2.webp" class="Proteina" >
+            </button>
+            
+            <button class="image-container">
+                <img src="prote2.webp" class="Proteina">
                 <div class="image-description">
                     100% Real Whey Protein 1000g
                 </div>
-            </div>
-            <div class="image-container">
-                <img src="3.webp" class="Proteina" >
+            </button>
+            
+            <button class="image-container">
+                <img src="prote3.webp" class="Proteina">
                 <div class="image-description">
-                    Proteina Whey Zero Diet 
+                    Proteina Whey Zero Diet
                 </div>
-            </div>
-            <div class="image-container">
-                <img src="4.webp" class="Cafeina" >
-                <div class="image-description">
-                    Capsulas Cafeina 200mg
-                </div>
-            </div>
-            <div class="image-container">
-                <img src="5.webp" class="Creatina" >
-                <div class="image-description">
-                     Creatina Monohydrate 300g
-                </div>
-            </div>
-            <div class="image-container">
-                <img src="6.webp" >
-                <div class="image-description">
-                    Zero Protein Snack 35g
-                </div>
-            </div>
-            <div class="image-container">
-                <img src="7.webp" >
+            </button>
+            
+            <button class="image-container">
+                <img src="prote4.webp" class="Proteina">
                 <div class="image-description">
                     Proteina Whey isolate 1000g
                 </div>
-            </div>
-            <div class="image-container">
-                <img src="8.webp" >
+            </button>
+            
+            <button class="image-container">
+                <img src="prote5.png" class="Proteina">
+                <div class="image-description">
+                    Proteina Whey Proteina
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="prote6.webp" class="Proteina">
+                <div class="image-description">
+                    Proteina Isolate Prime
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="prote7.jpg" class="Proteina">
+                <div class="image-description">
+                    Proteina premium whey
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="snack1.webp" class="Snacks">
                 <div class="image-description">
                     Proteina bar High Protein 1000g
                 </div>
-            </div>
-            <div class="image-container">
-                <img src="9.webp" >
+            </button>
+            
+            <button class="image-container">
+                <img src="snack2.webp" class="Snacks">
                 <div class="image-description">
-                    Proteina Isolate Prime 
+                    Zero Protein Snack 35g
                 </div>
-            </div>
-            <div class="image-container">
-                <img src="10.webp" >
+            </button>
+            
+            <button class="image-container">
+                <img src="snack3.webp" class="Snacks">
                 <div class="image-description">
                     4 x Pancake 500 g
                 </div>
-            </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="snack4.webp" class="Snacks">
+                <div class="image-description">
+                    Snack fitness eco
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="snack5.jpg" class="Snacks">
+                <div class="image-description">
+                    Snack fitness eco
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="snack6.webp" class="Snacks">
+                <div class="image-description">
+                    Snack fitness eco
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="snack7.jpg" class="Snacks">
+                <div class="image-description">
+                    Snack fitness eco
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="eq1.webp" class="Equipo">
+                <div class="image-description">
+                    Guantes v1
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="eq2.webp" class="Equipo">
+                <div class="image-description">
+                    Guantes v2
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="eq3.jpg" class="Equipo">
+                <div class="image-description">
+                    Equipo para peso muerto
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="eq4.avif" class="Equipo">
+                <div class="image-description">
+                    Botella de plastico
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="eq5.avif" class="Equipo">
+                <div class="image-description">
+                    Botella plástico negra
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="eq6.avif" class="Equipo">
+                <div class="image-description">
+                    Botella aluminio
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="eq7.avif" class="Equipo">
+                <div class="image-description">
+                    Botella marron
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="cafe1.webp" class="Cafeina">
+                <div class="image-description">
+                    Capsulas Cafeina 200mg
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="cafe2.avif" class="Cafeina">
+                <div class="image-description">
+                    bebida Cafeina 180mg
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="cafe3.jpeg" class="Cafeina">
+                <div class="image-description">
+                    Suplemento de cafeina
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="cafe4.jpg" class="Cafeina">
+                <div class="image-description">
+                    Suplemento de cafeina
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="cafe5.jpg" class="Cafeina">
+                <div class="image-description">
+                    Suplemento de cafeina
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="cafe6.jpg" class="Cafeina">
+                <div class="image-description">
+                    Suplemento de cafeina
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="cafe7.webp" class="Cafeina">
+                <div class="image-description">
+                    Suplemento de cafeina
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="crea1.webp" class="Creatina">
+                <div class="image-description">
+                    Creatina Monohydrate 300g
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="crea2.jpg" class="Creatina">
+                <div class="image-description">
+                    Creatina
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="crea3.jpg" class="Creatina">
+                <div class="image-description">
+                    Creatina
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="crea4.jpg" class="Creatina">
+                <div class="image-description">
+                    Creatina
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="crea5.jpg" class="Creatina">
+                <div class="image-description">
+                    Creatina
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="crea6.avif" class="Creatina">
+                <div class="image-description">
+                    Creatina
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="crea7.jpg" class="Creatina">
+                <div class="image-description">
+                    Creatina
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="pre1.webp" class="Pre">
+                <div class="image-description">
+                    Pre Big Shot
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="pre2.jpg" class="Pre">
+                <div class="image-description">
+                    Preentreno
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="pre3.jpg" class="Pre">
+                <div class="image-description">
+                    Preentreno
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="pre4.jpg" class="Pre">
+                <div class="image-description">
+                    Preentreno
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="pre5.jpg" class="Pre">
+                <div class="image-description">
+                    Preentreno
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="pre6.jpg" class="Pre">
+                <div class="image-description">
+                    Preentreno
+                </div>
+            </button>
+            
+            <button class="image-container">
+                <img src="pre7.jpg" class="Pre">
+                <div class="image-description">
+                    Preentreno
+                </div>
+            </button>
+         
+
+
         </center>
 
 
