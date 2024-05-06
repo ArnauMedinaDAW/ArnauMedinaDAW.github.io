@@ -1,55 +1,79 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+
+<html lang="en">
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plan Nutrición</title>
-    <link rel="icon" type="image/png" href="minLOGO.PNG">
+
+    <title>Plan de nutrición</title>
+    <link rel="stylesheet" href="PlanNutricion.css">
     <link rel="stylesheet" href="NAV.css">
     <script src="NAV.js"></script>
     <script src="PlanNutricion.js"></script>
-  
-</head>
-<body>
+    </head>
+    <body>
+
 
     <nav>
-
-
         <div class="logo-container">
             <button id="logobuton" onclick="redirectToPageIndex()"><img id="logo" src="Logo.PNG"></button>
         </div>
-		<ul class="menu-horizontal">
-			<li><a href="#">Login</a></li>
-			<li>
-				<a href="#">Planes</a>
-				<ul class="menu-vertical">
-					<li><a onclick="redirectToPagePlanNutricion()"href="#">Plan nutrición</a></li>
-					<li><a onclick="redirectToPagePlanEntrenamiento() "href="#">Plan entrenamiento</a></li>
-				</ul>
-			</li>
+        <ul class="menu-horizontal">
+            <li><a href="#">Login</a></li>
+            <li>
+                <a href="#">Planes</a>
+                <ul class="menu-vertical">
+                    <li><a onclick="redirectToPagePlanNutricion()"href="#">Plan nutrición</a></li>
+                    <li><a onclick="redirectToPagePlanEntrenamiento() "href="#">Plan entrenamiento</a></li>
+                </ul>
+            </li>
             <li><a  onclick="redirectToPageProductos()" href="#">Productos</a>
             </li>
-			<li><a  onclick="redirectToPageBlog()" href="#">Blog</a></li>
-			<li><a onclick="redirectToPageNosotros()" href="#">Nosotros</a></li>
+            <li><a  onclick="redirectToPageBlog()" href="#">Blog</a></li>
+            <li><a onclick="redirectToPageNosotros()" href="#">Nosotros</a></li>
             <li><a  onclick="redirectToPageINFO()" href="#">Información</a></li>
 
-		</ul>
-	</nav>
+        </ul>
+    </nav>
 
-    <form action="" name="bd_practica" method="post">
-        <input type="text" name="edat" placeholder="edat">
-        <input type="text" name="sexo" placeholder="sexo">
-        <input type="text" name="peso" placeholder="peso">
-        <input type="text" name="altura" placeholder="altura">
-        <input type="text" name="actividad fisica" placeholder="actividad fisica">
-    
-        <input type="submit" name="registro" value="Enviar">
-        <input type="reset" value="Restablecer">
+    <div class="container">
+    <h1>Calculadora de Calorías</h1>
+    <form id="calorieForm">
+        <div class="form-group">
+        <label for="gender">Género:</label>
+        <select id="gender" name="gender">
+            <option value="male">Masculino</option>
+            <option value="female">Femenino</option>
+        </select>
+        </div>
+        <div class="form-group">
+        <label for="age">Edad:</label>
+        <input type="number" id="age" name="age" min="1" required>
+        </div>
+        <div class="form-group">
+        <label for="height">Altura (cm):</label>
+        <input type="number" id="height" name="height" min="1" required>
+        </div>
+        <div class="form-group">
+        <label for="weight">Peso (kg):</label>
+        <input type="number" id="weight" name="weight" min="1" required>
+        </div>
+        <div class="form-group">
+        <label for="activity">Actividad física:</label>
+        <select id="activity" name="activity">
+            <option value="sedentary">Sedentario</option>
+            <option value="lightlyActive">Ligeramente activo</option>
+            <option value="moderatelyActive">Moderadamente activo</option>
+            <option value="veryActive">Muy activo</option>
+            <option value="extraActive">Extremadamente activo</option>
+        </select>
+        </div>
+        <button type="submit">Calcular Calorías</button>
     </form>
+    <div id="result"></div>
+    </div>
 
+    </body>
 
-
-</body>
 </html>
-
 

@@ -1,3 +1,7 @@
+body{
+	background-color: rgb(224, 224, 224);
+}
+
 .logo-container {
     margin-left: 20px; /* Espacio entre el logo y la lista */
 }
