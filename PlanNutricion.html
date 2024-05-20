@@ -9,32 +9,31 @@
     <link rel="stylesheet" href="PlanNutricion.css">
     <link rel="stylesheet" href="NAV.css">
     <script src="NAV.js"></script>
-    <script src="PlanNutricion.js"></script>
     </head>
     <body>
+    
+        <nav>
 
-
-    <nav>
-        <div class="logo-container">
-            <button id="logobuton" onclick="redirectToPageIndex()"><img id="logo" src="Logo.PNG"></button>
-        </div>
-        <ul class="menu-horizontal">
-            <li><a href="#">Login</a></li>
-            <li>
-                <a href="#">Planes</a>
-                <ul class="menu-vertical">
-                    <li><a onclick="redirectToPagePlanNutricion()"href="#">Plan nutrición</a></li>
-                    <li><a onclick="redirectToPagePlanEntrenamiento() "href="#">Plan entrenamiento</a></li>
-                </ul>
-            </li>
-            <li><a  onclick="redirectToPageProductos()" href="#">Productos</a>
-            </li>
-            <li><a  onclick="redirectToPageBlog()" href="#">Blog</a></li>
-            <li><a onclick="redirectToPageNosotros()" href="#">Nosotros</a></li>
-            <li><a  onclick="redirectToPageINFO()" href="#">Información</a></li>
-
-        </ul>
-    </nav>
+            <div class="logo-container">
+                <button id="logobuton" onclick="redirectToPageIndex()"><img id="logo" src="Logo.PNG"></button>
+            </div>
+            <ul class="menu-horizontal">
+                <li><a href="#">Login</a></li>
+                <li>
+                    <a href="#">Planes</a>
+                    <ul class="menu-vertical">
+                        <li><a onclick="redirectToPagePlanNutricion()"href="#">Plan nutrición</a></li>
+                        <li><a onclick="redirectToPagePlanEntrenamiento() "href="#">Plan entrenamiento</a></li>
+                    </ul>
+                </li>
+                <li><a  onclick="redirectToPageProductos()" href="#">Productos</a>
+                </li>
+                <li><a  onclick="redirectToPageBlog()" href="#">Blog</a></li>
+                <li><a onclick="redirectToPageNosotros()" href="#">Nosotros</a></li>
+                <li><a  onclick="redirectToPageINFO()" href="#">Información</a></li>
+    
+            </ul>
+        </nav>
 
     <div class="container">
     <h1>Calculadora de Calorías</h1>
@@ -72,8 +71,18 @@
     </form>
     <div id="result"></div>
     </div>
-
+    <script src="PlanNutricion.js"></script>
     </body>
 
-</html>
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 Fit Camp. Todos los derechos reservados.</p>
+            <ul>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Términos de servicio</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+    </footer>
 
+</html>

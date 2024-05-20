@@ -111,7 +111,11 @@ body {
     max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
     max-height: 100%; /* Ajusta la altura máxima de la imagen */
 }
+#carrito{
 
+    width: 35px;
+    height: 35px;
+}
 
 footer {
   

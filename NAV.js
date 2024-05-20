@@ -1,85 +1,73 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Obtener referencia al contenedor de navegación
-    const navContainer = document.querySelector("nav ul.menu-horizontal");
+    // Obtener referencia al enlace de login
+    const loginLink = document.getElementById("loginLink");
 
-    // Agregar un evento de clic al contenedor de navegación
-    navContainer.addEventListener("click", function(event) {
-        // Verificar si el elemento clickeado es el enlace de login
-        if (event.target.tagName === "A" && event.target.textContent.trim() === "Login") {
-            // Evitar el comportamiento predeterminado del enlace
-            event.preventDefault();
-            // Mostrar u ocultar el formulario de inicio de sesión
-            const loginForm = document.getElementById("loginForm");
-            if (loginForm.style.display === "none") {
-                loginForm.style.display = "block";
-            } else {
-                loginForm.style.display = "none";
-            }
+    // Obtener referencia al formulario de inicio de sesión
+    const loginForm = document.getElementById("loginForm");
+
+    // Agregar un evento de clic al enlace de login
+    loginLink.addEventListener("click", function(event) {
+        // Evitar el comportamiento predeterminado del enlace
+        event.preventDefault();
+        // Mostrar u ocultar el formulario de inicio de sesión
+        if (loginForm.style.display === "none" || loginForm.style.display === "") {
+            loginForm.style.display = "block";
+        } else {
+            loginForm.style.display = "none";
         }
+    });
+
+    // Obtener referencia a los elementos del formulario y al mensaje de login
+    const usernameInput = document.getElementById("username");
+    const passwordInput = document.getElementById("password");
+    const loginMessage = document.getElementById("loginMessage");
+
+    // Agregar un evento de envío al formulario de inicio de sesión para prevenir la recarga de la página
+    loginForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        // Obtener los valores del nombre de usuario y la contraseña ingresados
+        const username = usernameInput.value;
+        const password = passwordInput.value;
+        // Verificar las credenciales y mostrar el mensaje de login
+        if ((username === "Arnau" && password === "Arnau") || (username === "David" && password === "David")) {
+            
+            window.location.href = "PlanNutricion.html"; 
+
+        } else {
+            loginMessage.textContent = "Nombre de usuario o contraseña incorrectos";
+        }
+        // Limpiar los campos de entrada
+        usernameInput.value = "";
+        passwordInput.value = "";
     });
 });
 
+    // Funciones de redirección
+    window.redirectToPagePlanNutricion = function() {
+        window.location.href = "PlanNutricion.html"; 
+    }
 
-// Obtener referencia a los elementos del formulario y al botón de registro
-const usernameInput = document.getElementById("username");
-const passwordInput = document.getElementById("password");
-const loginForm = document.getElementById("loginForm");
-const registerBtn = document.getElementById("registerBtn");
+    window.redirectToPagePlanEntrenamiento = function() {
+        window.location.href = "PlanEntrenamiento.html"; 
+    }
 
-// Agregar un evento de cambio a los campos de entrada de usuario y contraseña
-usernameInput.addEventListener("input", checkCredentials);
-passwordInput.addEventListener("input", checkCredentials);
+    window.redirectToPageProductos = function() {
+        window.location.href = "productos.html"; 
+    }
 
-// Función para verificar las credenciales ingresadas
-function checkCredentials() {
-    const username = usernameInput.value;
-    const password = passwordInput.value;
+    window.redirectToPageBlog = function() {
+        window.location.href = "blog.html"; 
+    }
 
-    // Realizar una solicitud AJAX para leer el archivo JSON
-    fetch('JSON.json')
-        .then(response => response.json())
-        .then(data => {
-            // Verificar si las credenciales coinciden con alguna entrada en el archivo JSON
-            const userExists = data.usuarios.some(user => user.usuario === username && user.contraseña === password);
-            var users = data.usuarios;
-            // Si las credenciales no existen, mostrar el botón de registro
-            if (!userExists) {
-                registerBtn.style.display = "block";
-            } else {
-                registerBtn.style.display = "none";
-            }
-        })
-        .catch(error => console.error('Error al cargar el archivo JSON:', error));
-}
+    window.redirectToPageNosotros = function() {
+        window.location.href = "nosotros.html"; 
+    }
 
-// Agregar un evento de envío al formulario de inicio de sesión para prevenir la recarga de la página
-loginForm.addEventListener("submit", function(event) {
-    event.preventDefault();
-})
+    window.redirectToPageINFO = function() {
+        window.location.href = "info.html"; 
+    }
 
+    window.redirectToPageIndex = function() {
+        window.location.href = "index.html"; 
+    }
 
-//Cambiar de html
-function redirectToPagePlanNutricion() {
-    window.location.href = "PlanNutricion.html"; 
-}
-function redirectToPagePlanEntrenamiento() {
-    window.location.href = "PlanEntrenamiento.html"; 
-}
-function redirectToPageProductos() {
-    window.location.href = "productos.html"; 
-}
-function redirectToPageBlog() {
-    window.location.href = "blog.html"; 
-}
-function redirectToPageNosotros() {
-    window.location.href = "nosotros.html"; 
-}
-
-function redirectToPageINFO() {
-    window.location.href = "info.html"; 
-}
-
-
-function redirectToPageIndex() {
-    window.location.href = "index.html"; 
-}

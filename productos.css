@@ -27,7 +27,7 @@
     .image-container {
         padding-top: 30px;
         padding-left: 8px;
-        padding-right  : 8px;
+        padding-right: 8px;
         position: relative; /* Para permitir que el texto descriptivo se posicione correctamente */
         display: inline-block; /* Para que el contenedor se ajuste al tamaño de la imagen */
         border: none;
