@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plan Nutrición</title>
@@ -8,6 +10,7 @@
     <script src="NAV.js"></script>
     <link rel="stylesheet" href="NAV.css">
     <script src="PlanNutricion.js"></script>
+    <link rel="stylesheet" href="PlanEntrenamiento.css">
 </head>
 <body>
     
@@ -17,7 +20,7 @@
             <button id="logobuton" onclick="redirectToPageIndex()"><img id="logo" src="Logo.PNG"></button>
         </div>
 		<ul class="menu-horizontal">
-			<li><a href="#">Login</a></li>
+			<li><a href="#" id="loginLink"><img class="user" src ="user.png"></a></li>
 			<li>
 				<a href="#">Planes</a>
 				<ul class="menu-vertical">
@@ -30,13 +33,318 @@
 			<li><a  onclick="redirectToPageBlog()" href="#">Blog</a></li>
 			<li><a onclick="redirectToPageNosotros()" href="#">Nosotros</a></li>
             <li><a  onclick="redirectToPageINFO()" href="#">Información</a></li>
-
+            <li><a ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+              </svg></a></li>
 		</ul>
 	</nav>
+        <!-- LOGIN -->
+        <div id="loginForm" style="display: none;">
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" placeholder="Ingrese su usuario">
+        
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" placeholder="Ingrese su contraseña">
+        
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+            <p id="loginMessage" style="color: red;"></p>
+            <button id="registerBtn" style="display: none;">REGISTRARSE</button>
+        </div>
     
 
-
-
+        <h1>Rutinas de Entrenamiento</h1>
+    
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Rutina de 3 Días
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <table class="routine-table">
+                        <thead>
+                            <tr>
+                                <th>Día</th>
+                                <th>Ejercicio</th>
+                                <th>Repeticiones</th>
+                                <th>Series</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lunes</td>
+                                <td>Sentadillas</td>
+                                <td>10</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Press de banca</td>
+                                <td>8</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Dominadas</td>
+                                <td>8</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Miércoles</td>
+                                <td>Press militar</td>
+                                <td>10</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Remo con barra</td>
+                                <td>12</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Fondos</td>
+                                <td>10</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Viernes</td>
+                                <td>Deadlift</td>
+                                <td>5</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Press de banca inclinado</td>
+                                <td>8</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Abdominales</td>
+                                <td>15</td>
+                                <td>3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Rutina de 4 Días
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <table class="routine-table">
+                        <thead>
+                            <tr>
+                                <th>Día</th>
+                                <th>Ejercicio</th>
+                                <th>Repeticiones</th>
+                                <th>Series</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lunes</td>
+                                <td>Sentadillas</td>
+                                <td>10</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Press de banca</td>
+                                <td>8</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Dominadas</td>
+                                <td>8</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Martes</td>
+                                <td>Press militar</td>
+                                <td>10</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Remo con barra</td>
+                                <td>12</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Fondos</td>
+                                <td>10</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Jueves</td>
+                                <td>Deadlift</td>
+                                <td>5</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Press de banca inclinado</td>
+                                <td>8</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Abdominales</td>
+                                <td>15</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Viernes</td>
+                                <td>Sentadillas búlgaras</td>
+                                <td>12</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Remo con mancuerna</td>
+                                <td>10</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Press militar sentado</td>
+                                <td>8</td>
+                                <td>3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Rutina de 5 Días
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <table class="routine-table">
+                        <thead>
+                            <tr>
+                                <th>Día</th>
+                                <th>Ejercicio</th>
+                                <th>Repeticiones</th>
+                                <th>Series</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lunes</td>
+                                <td>Sentadillas</td>
+                                <td>10</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Press de banca</td>
+                                <td>8</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Dominadas</td>
+                                <td>8</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Martes</td>
+                                <td>Press militar</td>
+                                <td>10</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Remo con barra</td>
+                                <td>12</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Fondos</td>
+                                <td>10</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Miércoles</td>
+                                <td>Deadlift</td>
+                                <td>5</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Press de banca inclinado</td>
+                                <td>8</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Abdominales</td>
+                                <td>15</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Jueves</td>
+                                <td>Sentadillas búlgaras</td>
+                                <td>12</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Remo con mancuerna</td>
+                                <td>10</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Press militar sentado</td>
+                                <td>8</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Viernes</td>
+                                <td>Elevaciones laterales</td>
+                                <td>12</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Flexiones de brazo</td>
+                                <td>15</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Plancha</td>
+                                <td>1 min</td>
+                                <td>3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+              </div>
+            </div>
+          </div>            
 
 
 </body>

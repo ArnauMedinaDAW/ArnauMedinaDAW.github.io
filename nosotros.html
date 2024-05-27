@@ -22,7 +22,7 @@
             <button id="logobuton"  onclick="redirectToPageIndex()"><img id="logo" src="Logo.PNG"></button>
         </div>
 		<ul class="menu-horizontal">
-			<li><a href="#">Login</a></li>
+			<li><a href="#" id="loginLink"><img class="user" src ="user.png"></a></li>
 			<li>
 				<a href="#">Planes</a>
 				<ul class="menu-vertical">
@@ -35,10 +35,28 @@
 			<li><a  onclick="redirectToPageBlog()" href="#">Blog</a></li>
 			<li><a onclick="redirectToPageNosotros()" href="#">Nosotros</a></li>
             <li><a  onclick="redirectToPageINFO()" href="#">Información</a></li>
-
+            <li><a > <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+              </svg></a></li>
 		</ul>
 	</nav>
 
+    <!-- LOGIN -->
+    <div id="loginForm" style="display: none;">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" placeholder="Ingrese su usuario">
+    
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" placeholder="Ingrese su contraseña">
+    
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <p id="loginMessage" style="color: red;"></p>
+        <button id="registerBtn" style="display: none;">REGISTRARSE</button>
+    </div>
 
 
     <div class="div1">
@@ -46,7 +64,7 @@
         <h2>Ayudandote a encontrar tu mejor versión</h2>
         <p>Empresa dedicada al bienestar y rendimiento deportivo, ofreciendo productos de alta calidad y apoyo integral para maximizar el potencial atlético. Misión de impulsar un estilo de vida activo y saludable respaldado por ciencia e innovación. Únete a nosotros para alcanzar una mejor versión de ti mismo. </p>
    
-        <img src="nosotros1.PNG" class="imagen-derecha" >
+        <img src="foto_nosotros.jpg" class="imagen-derecha" >
         <button>Contacto</button>
     </div>
 

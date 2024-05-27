@@ -47,9 +47,10 @@ button:hover{
     background: #4949E0;
 }
 .imagen-derecha {
+    margin-top: 200px;
     position: absolute;
     width:500px;
-    height:140px;
+    height:auto;
     right: 12%;
     top: 40%; /* Puedes ajustar esto según tu diseño */
 }

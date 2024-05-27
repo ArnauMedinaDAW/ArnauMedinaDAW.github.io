@@ -30,9 +30,10 @@ document.addEventListener("DOMContentLoaded", function() {
         const password = passwordInput.value;
         // Verificar las credenciales y mostrar el mensaje de login
         if ((username === "Arnau" && password === "Arnau") || (username === "David" && password === "David")) {
-            
-            window.location.href = "PlanNutricion.html"; 
-
+            alert("Te has registrado exitosamente");
+            // Guardar el estado de inicio de sesión en el almacenamiento local
+            localStorage.setItem("isLoggedIn", true);
+ 
         } else {
             loginMessage.textContent = "Nombre de usuario o contraseña incorrectos";
         }
@@ -42,32 +43,45 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-    // Funciones de redirección
-    window.redirectToPagePlanNutricion = function() {
-        window.location.href = "PlanNutricion.html"; 
-    }
+// Funciones de redirección
+window.redirectToPagePlanNutricion = function() {
+    window.location.href = "PlanNutricion.html"; 
+}
 
-    window.redirectToPagePlanEntrenamiento = function() {
-        window.location.href = "PlanEntrenamiento.html"; 
-    }
+window.redirectToPagePlanEntrenamiento = function() {
+    window.location.href = "PlanEntrenamiento.html"; 
+}
 
-    window.redirectToPageProductos = function() {
-        window.location.href = "productos.html"; 
-    }
+window.redirectToPageProductos = function() {
+    window.location.href = "productos.html"; 
+}
 
-    window.redirectToPageBlog = function() {
-        window.location.href = "blog.html"; 
-    }
 
-    window.redirectToPageNosotros = function() {
-        window.location.href = "nosotros.html"; 
-    }
+window.redirectToPageBlog = function() {
+    window.location.href = "blog.html"; 
+}
 
-    window.redirectToPageINFO = function() {
-        window.location.href = "info.html"; 
-    }
+window.redirectToPageNosotros = function() {
+    window.location.href = "nosotros.html"; 
+}
 
-    window.redirectToPageIndex = function() {
-        window.location.href = "index.html"; 
-    }
+window.redirectToPageINFO = function() {
+    window.location.href = "info.html"; 
+}
 
+window.redirectToPageIndex = function() {
+    window.location.href = "index.html"; 
+}
+
+window.redirectToPageTablaProductos = function() {
+    // Verificar si el usuario está logueado antes de redirigir a la página de productos
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    if (isLoggedIn) {
+        window.location.href = "TablaProductos.html"; 
+    } else {
+        // Si el usuario no está logueado, mostrar un mensaje de error o redirigir a la página de inicio de sesión
+        alert("Debes iniciar sesión primero.");
+        // Opcionalmente, puedes redirigir al usuario a la página de inicio de sesión
+        // window.location.href = "index.html";
+    }
+}
